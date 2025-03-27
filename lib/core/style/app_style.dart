@@ -24,6 +24,11 @@ class AppStyle {
         fontWeight: FontWeight.w400,
         color: Colors.white,
       ),
+      titleLarge: TextStyle(
+          color:AppColors.secondaryLightColor,
+          fontSize: 26,
+          fontWeight: FontWeight.w400
+      )
     ),
     scaffoldBackgroundColor: Colors.white,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
