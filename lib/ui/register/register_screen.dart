@@ -40,6 +40,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
         centerTitle: true,
         titleTextStyle: const TextStyle(
             color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+        iconTheme: IconThemeData(
+            color: Colors.white
+        ),
       ),
       body: Center(
         child: Padding(
@@ -56,7 +59,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     label: "Full Name",
                     keyboard: TextInputType.name,
                     validate: (value) {
-                      if (value == null || value.isEmpty) {
+                      if (value == null || value.trim().isEmpty) {
                         return "Please enter your name";
                       }
                       return null;
@@ -69,7 +72,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     keyboard: TextInputType.phone,
                     maxLength: 11,
                     validate: (value) {
-                      if (value == null || value.isEmpty) {
+                      if (value == null || value.trim().isEmpty) {
                         return "Please enter your phone";
                       }
                       if(value.length<11){
@@ -81,10 +84,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   SizedBox(height: MediaQuery.of(context).size.height * 0.01),
                   CustomFormField(
                     controller: ageController,
+                    maxLength: 2,
                     label: "age",
                     keyboard: TextInputType.number,
                     validate: (value) {
-                      if (value == null || value.isEmpty) {
+                      if (value == null || value.trim().isEmpty) {
                         return "Please enter your age";
                       }
                       return null;
@@ -96,7 +100,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     label: "Email Address",
                     keyboard: TextInputType.emailAddress,
                     validate: (value) {
-                      if (value == null || value.isEmpty) {
+                      if (value == null || value.trim().isEmpty) {
                         return "Please enter your email";
                       }
                       if (!isValidEmail(value)) {
@@ -112,7 +116,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     label: "Password",
                     keyboard: TextInputType.visiblePassword,
                     validate: (value) {
-                      if (value == null || value.isEmpty) {
+                      if (value == null || value.trim().isEmpty) {
                         return "Please enter your password";
                       }
                       if (value.length < 6) {
@@ -128,7 +132,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     label: "Password confirmation",
                     keyboard: TextInputType.visiblePassword,
                     validate: (value) {
-                      if (value == null || value.isEmpty) {
+                      if (value == null || value.trim().isEmpty) {
                         return "Please enter your password confirmation";
                       }
                       if (value != passwordController.text) {

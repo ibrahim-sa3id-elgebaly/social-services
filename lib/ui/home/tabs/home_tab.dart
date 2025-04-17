@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/model/services_model.dart';
 import '../../../widget/services_item.dart';
-import '../../login/login_screen.dart';
+import '../../service/service_screen.dart';
 
 class HomeTab extends StatelessWidget {
   const HomeTab({super.key});
@@ -28,7 +28,7 @@ class HomeTab extends StatelessWidget {
                   crossAxisSpacing: 25.w),
               itemBuilder: (context, index) => ServicesItem(
                   onPress: (category) {
-                    Navigator.pushNamed(context, LoginScreen.routeName);
+                    Navigator.pushNamed(context, ServiceScreen.routeName);
                   },
                   categoriesModel: ServicesModel.categories[index],
                   index: index),

@@ -39,6 +39,9 @@ class _LoginScreenState extends State<LoginScreen> {
           centerTitle: true,
           titleTextStyle: const TextStyle(
               color: Colors.white, fontSize: 20, fontWeight: FontWeight.bold),
+          iconTheme: IconThemeData(
+              color: Colors.white
+          ),
         ),
         body: Center(
           child: Padding(
@@ -71,7 +74,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       label: "Password",
                       keyboard: TextInputType.visiblePassword,
                       validate: (value) {
-                        if (value == null || value.isEmpty) {
+                        if (value == null || value.trim().isEmpty) {
                           return "Please enter your password";
                         }
                         if (value.length < 6) {

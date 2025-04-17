@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:social_service/ui/about_us/about_us.dart';
 import 'package:social_service/ui/contact_us/contact_us.dart';
 import 'package:social_service/ui/settings/settings_screen.dart';
-
 import '../../../widget/custom_button_settings.dart';
 import '../../../widget/profile_header.dart';
 import '../../login/login_screen.dart';

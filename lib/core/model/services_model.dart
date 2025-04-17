@@ -22,17 +22,17 @@ class ServicesModel {
     ServicesModel(
         id: "2",
         title: "مساعدات الطريق",
-        image: "environment.png",
+        image: "clean_road.jpg",
         background: Color(0xffCF7E48)),
     ServicesModel(
         id: "3",
         title: "توزيع مساعدات",
-        image: "business.png",
+        image: "donation.jpg",
         background: Color(0xffCF7E48)),
     ServicesModel(
         id: "4",
         title: "ترميم بيوت",
-        image: "business.png",
+        image: "building.png",
         background: Color(0xffCF7E48)),
     ServicesModel(
         id: "5",
@@ -42,7 +42,7 @@ class ServicesModel {
     ServicesModel(
         id: "6",
         title: "تعليم و تدريب",
-        image: "science.png",
+        image: "learning.jpg",
         background: Color(0xffCF7E48)),
     ServicesModel(
         id: "7",

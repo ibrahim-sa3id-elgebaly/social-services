@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'app_colors.dart';
 
 class AppStyle {
@@ -26,9 +25,15 @@ class AppStyle {
       ),
       titleLarge: TextStyle(
           color:AppColors.secondaryLightColor,
-          fontSize: 26,
+          fontSize: 26.sp,
           fontWeight: FontWeight.w400
-      )
+      ),
+      displayMedium: TextStyle(
+          fontSize: 20.sp,
+          fontWeight: FontWeight.w600,
+          color: Colors.black
+      ),
+
     ),
     scaffoldBackgroundColor: Colors.white,
     bottomNavigationBarTheme: const BottomNavigationBarThemeData(
@@ -44,7 +49,11 @@ class AppStyle {
         size: 30,
       ),
     ),
-    colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    colorScheme: ColorScheme.fromSeed(
+        seedColor: Colors.deepPurple,
+      primary: AppColors.primaryLightColor,
+      secondary: AppColors.secondaryLightColor
+    ),
     useMaterial3: true,
   );
 
@@ -83,7 +92,10 @@ class AppStyle {
         size: 30,
       ),
     ),
-    colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+    colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple,
+      primary: AppColors.primaryDarkColor,
+      secondary: AppColors.secondaryLightColor,
+    ),
     useMaterial3: true,
   );
 }
